@@ -67,12 +67,3 @@ $em: $base-font-size;
 
 $navbar-background: $black;
 $navbar-color: $white;
-
-%sans-serif {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    font-stretch: normal;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.65 * $em;
-}

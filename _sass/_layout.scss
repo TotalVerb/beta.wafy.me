@@ -8,165 +8,16 @@ a.site-title {
 }
 
 nav {
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
+    background-color: $background-color;
     .page-link {
         color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
-    @media screen and (max-width: $mobile-width) {
-        background-color: $background-color;
-        text-align: right;
-
-        .menu-icon {
-            display: inline-block;
-            float: right;
-            width: 36px;
-            text-align: center;
-
-            > svg {
-                width: 25px;
-                height: 20px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-            border: 1px solid black;
-            padding-top: 0.25em;
-        }
-
-        &:hover .trigger li {
-            display: block;
-            padding: 0;
-            margin-top: -0.25em;
-        }
-
-        &:hover .trigger li a {
-            padding: 0.25em 1em;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
     }
 }
-
-
-
-/**
- * Site footer
- */
-.site-footer {
-    padding: $spacing-unit 0;
-}
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
-
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@media screen and (max-width: $laptop-width) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@media screen and (max-width: $mobile-width) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-
-
-/**
- * Page content
- */
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
 
 /**
  * Posts
  */
-
- article.post {
+article.post {
     header {
         margin-bottom: $spacing-unit;
 
@@ -197,38 +48,17 @@ nav {
     }
 }
 
-.trigger {
-    margin: 0;
-}
-
-.trigger li {
-    display: inline-block;
-    padding: 0;
-}
-
-.trigger li a {
-    display: inline-block;
-    padding: 0.5em 0.7em;
-}
-
-code {
-    font-family: $code-font-family;
-}
-
-pre {
-    font-family: $code-font-family;
-}
-
 // Core Layout
-header, main {
-    box-sizing: border-box;
-
+body > header, main {
     @media screen and (min-width: $content-width) {
         border: 1px solid black;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        margin-bottom: -1px;
     }
+
+    position: relative;
+    top: 2em;
+    box-sizing: border-box;
 
     max-width: $content-width;
     margin-right: auto;
@@ -238,17 +68,12 @@ header, main {
     padding-left: $spacing-unit;
 }
 
-header {
-    z-index: 1;
-
+body > header {
     @media screen and (min-width: $content-width) {
         border-top: 5px solid black;
     }
 
-    min-height: 56px;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
+    min-height: 75px;
 
     // Flexbox!
     display: flex;
@@ -274,6 +99,7 @@ h1.page-heading {
 }
 
 main {
+    margin-top: 0;
     padding-top: 1em;
     border-bottom-left-radius: $spacing-unit/2;
     border-bottom-right-radius: $spacing-unit/2;

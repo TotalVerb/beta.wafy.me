@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{if hasmath}} {{insert head_katex.html }}     {{end}}
+  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+  <link rel="stylesheet" href="https://wumss.github.io/rabbit/rabbit.min.css"/>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/judoc.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/infra/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/infra/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/infra/favicon-16x16.png">
+  <link rel="manifest" href="/assets/infra/site.webmanifest">
+  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68884109-1"></script>
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-68884109-1');
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <input id="nav-trigger" class="nav-trigger" type="checkbox" checked="checked">
+      <ul class="trigger">
+        <li><a class="site-title" href="/">Fengyang Wang</a></li><!--
+     --><li><a class="page-link" href="/résumé">Résumé</a></li><!--
+     --><li><a class="page-link" href="/projects">Projects</a></li><!--
+     --><li><a class="page-link" href="/about">About</a></li>
+      </ul>
+      <label for="nav-trigger"></label>
+    </nav>
+  </header>
+
+  <main>
+  <!-- Content appended here -->

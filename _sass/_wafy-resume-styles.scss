@@ -1,15 +1,11 @@
 a {
     color: $accent-color;
+    text-decoration: none;
 }
 
 a:hover {
     @extend a;
     text-decoration: underline;
-}
-
-body {
-    font-family: $base-font-family;
-    line-height: $base-line-height;
 }
 
 @mixin fa-icon-bullet {
@@ -57,15 +53,6 @@ address {
 }
 
 header {
-    margin-top: 2em;
-    max-width: $content-width;
-    border-radius: 5px;
-    padding: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    text-align: center;
-
     h1 {
         font-size: 2em;
         text-align: center;
@@ -147,8 +134,4 @@ section.skills-list {
 
     margin-top: 0;
     margin-bottom: 0;
-}
-
-footer {
-    @extend header;
 }
